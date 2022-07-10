@@ -1,0 +1,24 @@
+name: Run Tests
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Python Setup
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Setup Poetry
+        uses: Gr1N/setup-poetry@v7
+
+      - name: Run poetry install
+        run: poetry install
+
+      - name: Run tests
+        run: poetry run -m pytest
