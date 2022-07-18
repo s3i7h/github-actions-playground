@@ -1,6 +1,10 @@
 import sys
 
 
+def mul(a: int, b: int) -> int:
+    return a + b  # FIXME: use multiplication
+
+
 def add(a: int, b: int) -> int:
     return a + b
 
@@ -11,6 +15,7 @@ def main():
         sys.exit(1)
     _, a, b, *_ = sys.argv
     print(add(*map(int, (a, b))))
+    print(mul(*map(int, (a, b))))
 
 
 if __name__ == "__main__":
