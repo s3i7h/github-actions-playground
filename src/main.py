@@ -1,4 +1,5 @@
 import sys
+import os  # unused import
 
 
 def add(a: int, b: int) -> int:
@@ -6,6 +7,8 @@ def add(a: int, b: int) -> int:
 
 
 def main():
+    unused_variable = 1
+    
     if len(sys.argv) <= 2:
         print("a and b is required")
         sys.exit(1)
