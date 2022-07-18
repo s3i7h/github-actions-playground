@@ -20,10 +20,7 @@ jobs:
       - name: Run poetry install
         run: poetry install
 
-      - name: Run tests
-        run: poetry run python -m flake8
-
-      - name: Run tests
+      - name: Lint
         run: |
           echo "::add-matcher::flake8-problem-matcher.json"
           poetry run python -m flake8 .
