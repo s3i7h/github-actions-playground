@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,10 +20,7 @@ jobs:
       - name: Run poetry install
         run: poetry install
 
-      - name: Run tests
-        run: poetry run python -m flake8
-
-      - name: Run tests
+      - name: Lint
         run: |
-          echo "::add-matcher::flake8-problem-matcher.json"
+          echo "::add-matcher::.github/workflows/flake8-problem-matcher.json"
           poetry run python -m flake8 .
