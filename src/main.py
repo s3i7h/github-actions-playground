@@ -6,7 +6,7 @@ def add(a: int, b: int) -> int:
 
 
 def main():
-    if len(sys.argv) <=     2: # wrong style
+    if len(sys.argv) <= 2:  # wrong style
         print("a and b is required")
         sys.exit(1)
     _, a, b, *_ = sys.argv
