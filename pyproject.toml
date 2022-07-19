@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "github-actions-playground"
+name = "calculator"
 version = "0.1.0"
 description = ""
 authors = ["Yuichiro Luke Smith <contact@yu-smith.com>"]
